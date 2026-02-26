@@ -7,7 +7,6 @@ function HomeScreen() {
 
   const [display, setDisplay] = useState('');
 
-  // Função principal
   function pressionarBotao(valor) {
     if (valor === '=') {
       try {
@@ -23,7 +22,6 @@ function HomeScreen() {
     }
   }
 
-  // 🔥 Função em português
   function BotaoCalculadora(valor, ehIgual = false) {
     return (
       <TouchableOpacity
@@ -41,14 +39,12 @@ function HomeScreen() {
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
 
-      {/* Tela */}
       <View style={styles.displayContainer}>
         <Text style={styles.displayText}>
           {display === '' ? '0' : display}
         </Text>
       </View>
 
-      {/* Linha 1 */}
       <View style={styles.row}>
         {BotaoCalculadora('7')}
         {BotaoCalculadora('8')}
@@ -56,7 +52,6 @@ function HomeScreen() {
         {BotaoCalculadora('/')}
       </View>
 
-      {/* Linha 2 */}
       <View style={styles.row}>
         {BotaoCalculadora('4')}
         {BotaoCalculadora('5')}
@@ -64,7 +59,6 @@ function HomeScreen() {
         {BotaoCalculadora('*')}
       </View>
 
-      {/* Linha 3 */}
       <View style={styles.row}>
         {BotaoCalculadora('1')}
         {BotaoCalculadora('2')}
@@ -72,7 +66,6 @@ function HomeScreen() {
         {BotaoCalculadora('-')}
       </View>
 
-      {/* Linha 4 */}
       <View style={styles.row}>
         {BotaoCalculadora('0')}
         {BotaoCalculadora('C')}
